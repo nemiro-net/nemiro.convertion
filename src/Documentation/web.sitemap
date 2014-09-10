@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="Home" url="Content\Index.html" isDefault="true" isExpanded="true">
+    <siteMapNode title="Get Started" url="Content\Installation.html" isSelected="true" />
+    <siteMapNode title="Version number" url="Content\Version.html" />
+    <siteMapNode title="License" url="Content\License.html" />
+    <siteMapNode title="Donate" url="Content\Donate.html" />
+    <siteMapNode title="Feedback" url="Content\Feedback.html" />
+  </siteMapNode>
+</siteMap>

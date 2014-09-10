@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:mshelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <title>Get Started</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Language" content="en-us" />
+    <link rel="SHORTCUT ICON" href="./../icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./../styles/branding.css" />
+    <link rel="stylesheet" type="text/css" href="./../styles/branding-en-US.css" />
+  </head>
+  <body class="primary-mtps-offline-document">
+    <div class="OH_outerDiv">
+      <div class="OH_outerContent">
+        <div id="mainSection">
+          <div id="mainBody">
+            <h1>Get Started</h1>
+            <p>Use <b>NuGet Package Manager</b> to install <b>Nemiro.Convertion</b>.</p>
+            <p>To open the Package Manager Console, select menu: <b>Tools</b> =&gt; <b>Library Package Manager</b> =&gt; <b>Package Manager Console</b>.</p>
+            <p>Enter the command into the console:</p>
+            <pre>Install-Package Nemiro.Convertion</pre>
+            <p><b>NOTE:</b> If you need examples of using the library, <a href="https://github.com/alekseynemiro/Nemiro.Convertion/zipball/master" target="_top"><b>download Nemiro.Convertion</b></a>.</p>
+            <p>&nbsp;</p>
+            <p>If you do not have <b>Package Manager</b> or it's not work, you can <a href="https://github.com/alekseynemiro/Nemiro.Convertion/zipball/master" target="_top"><b>download Nemiro.Convertion</b></a> and add a reference to the assembly into your project.</p>
+            <p>Selecet menu: <b>Project</b> =&gt; <b>Add Reference...</b>.</p>
+            <p>Select <b>Browse</b> tab, locate and select the <b>Nemiro.Convertion.dll</b> and click <b>Ok</b>.</p>
+            <p>&nbsp;</p>
+            <p>Enjoy!</p>
+
+            <h2>How to use the library in your projects?</h2>
+            <p>Add to your project a reference to the <b>Nemiro</b> assembly and import namespace <b>Nemiro</b>:</p>
+            <pre lang="cs" numberLines="false" outlining="true" title="C#">
+            using Nemiro;
+            </pre>
+            <pre lang="vb" numberLines="false" outlining="true" title="VB">
+            Imports Nemiro
+            </pre>
+            <p>And you can use the Convertion class. For example:</p>
+            <pre lang="cs" numberLines="false" outlining="true" title="C#">
+            double d = Convertion.ToDouble("123,456");
+            double d2 = Convertion.ToDouble("123.456");
+            DateTime date = Convertion.ToDateTime("31.12.1980", "dd.MM.yyyy"));
+            string n = Convertion.ToBase62(45102691578);
+            object value = 1;
+            bool b = Convertion.ToBoolean(value);
+            value = null;
+            bool b2 = Convertion.ToBoolean(value);
+            bool b3 = Convertion.ToBoolean(value, true);
+            // etc.
+            </pre>
+            <pre lang="vb" numberLines="false" outlining="true" title="VB">
+            Dim d As Double = Convertion.ToDouble("123,456")
+            Dim d2  As Double = Convertion.ToDouble("123.456")
+            Sim date As Date = Convertion.ToDateTime("31.12.1980", "dd.MM.yyyy"))
+            Dim n As String = Convertion.ToBase62(45102691578)
+            Dim value As Object = 1
+            Dim b As Boolean = Convertion.ToBoolean(value)
+            value = Nothing
+            Dim b2 As Boolean = Convertion.ToBoolean(value)
+            Dim b3 As Boolean = Convertion.ToBoolean(value, True)
+            ' etc.
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="OH_footer" class="OH_footer"><p><a href="http://convertion.nemiro.net" target="_top">Copyright © Aleksey Nemiro, 2008-2014</a></p></div>
+  </body>
+</html>
