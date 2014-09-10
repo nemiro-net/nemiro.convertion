@@ -50,11 +50,11 @@ Console.WriteLine
 ```
 **Visual Basic .NET**
 ```VB
-Dim value As Object = "123.456" // dot
+Dim value As Object = "123.456" ' dot
 Dim num As Double = Convertion.ToDouble(value)
 Console.WriteLine("Number: {0}", num)
 
-value = "123,456" // comma
+value = "123,456" ' comma
 num = Convertion.ToDouble(value)
 Console.WriteLine("Number: {0}", num)
 
