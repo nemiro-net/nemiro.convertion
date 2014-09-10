@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Convertion class">
+    <HelpKINode Title="Convertion Class" Url="html/248c13dc-5922-9787-fc27-83a4f6f03de6.htm" />
+    <HelpKINode Title="about Convertion class" Url="html/248c13dc-5922-9787-fc27-83a4f6f03de6.htm" />
+    <HelpKINode Title="methods" Url="html/569f2a40-5490-3668-cc79-04dcdac9c6d5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Convertion.FromBase16 method" Url="html/ad8be5da-54ce-0c10-dd9e-cb54501a3206.htm" />
+  <HelpKINode Title="Convertion.FromBase36 method" Url="html/b8f12486-880a-8894-d05d-1cdb2fa78180.htm" />
+  <HelpKINode Title="Convertion.FromBase62 method" Url="html/0a60504b-8b87-e416-4469-de66b78c2c99.htm" />
+  <HelpKINode Title="Convertion.FromBaseX method" Url="html/53f47205-c250-82a6-cd14-e752c9ea9a78.htm" />
+  <HelpKINode Title="Convertion.ToBase16 method" Url="html/61abc12f-fbdb-e0ac-dfc1-925de9dee14b.htm" />
+  <HelpKINode Title="Convertion.ToBase36 method" Url="html/642076b1-6b19-34c2-eebc-9ca24bb2ca04.htm" />
+  <HelpKINode Title="Convertion.ToBase62 method" Url="html/4b7466de-5435-e537-e360-1aa9eb70fdc9.htm" />
+  <HelpKINode Title="Convertion.ToBaseX method" Url="html/da9c9037-8fc0-5e26-a9a3-3be4dbbb8c19.htm" />
+  <HelpKINode Title="Convertion.ToBoolean method" Url="html/5bc3e744-af13-f677-5c39-dc62303b8556.htm" />
+  <HelpKINode Title="Convertion.ToByte method" Url="html/3e0cece2-f409-9e9e-532f-4d3c0032241e.htm" />
+  <HelpKINode Title="Convertion.ToDateTime method" Url="html/010572b9-3cdd-cb98-81c7-da02de022396.htm" />
+  <HelpKINode Title="Convertion.ToDecimal method" Url="html/bdd7298d-ced0-d0d6-af4a-c9c7a06d6365.htm" />
+  <HelpKINode Title="Convertion.ToDouble method" Url="html/9f62123b-e788-6096-f10a-ce66bc65f37d.htm" />
+  <HelpKINode Title="Convertion.ToInt16 method" Url="html/407d3774-557e-50e6-4269-f66ef14387bc.htm" />
+  <HelpKINode Title="Convertion.ToInt32 method" Url="html/df158930-262d-2d81-a11c-dd2c7f494c41.htm" />
+  <HelpKINode Title="Convertion.ToInt64 method" Url="html/38e6c023-5478-bc1f-bc6c-6257ad700b84.htm" />
+  <HelpKINode Title="Convertion.ToMoneyString method" Url="html/a18e2163-0c39-531e-7977-199e217405c5.htm" />
+  <HelpKINode Title="Convertion.ToString method" Url="html/5b1b95a5-dfa6-21bc-c5b8-30f94b4cb8fa.htm" />
+  <HelpKINode Title="Convertion.ToStringBuilder method" Url="html/7fafcd12-dd10-fb96-b161-dbb1a76db8e2.htm" />
+  <HelpKINode Title="Convertion.ToTimeSpan method" Url="html/ae96b161-33fc-e919-3e97-9a896e1527f2.htm" />
+  <HelpKINode Title="Convertion.ToUInt16 method" Url="html/6d3a7580-32b7-6164-0703-e2e2f81176a9.htm" />
+  <HelpKINode Title="Convertion.ToUInt32 method" Url="html/9099fb17-fc0e-881f-1985-2fc0742fc88b.htm" />
+  <HelpKINode Title="Convertion.ToUInt64 method" Url="html/1a375eea-f27e-f715-3d32-4a18776cc8e7.htm" />
+  <HelpKINode Title="FromBase16 method" Url="html/ad8be5da-54ce-0c10-dd9e-cb54501a3206.htm" />
+  <HelpKINode Title="FromBase36 method" Url="html/b8f12486-880a-8894-d05d-1cdb2fa78180.htm" />
+  <HelpKINode Title="FromBase62 method" Url="html/0a60504b-8b87-e416-4469-de66b78c2c99.htm" />
+  <HelpKINode Title="FromBaseX method" Url="html/53f47205-c250-82a6-cd14-e752c9ea9a78.htm" />
+  <HelpKINode Title="Nemiro namespace" Url="html/6ad729a5-cc14-c644-c43d-6cb0d9014c4f.htm" />
+  <HelpKINode Title="Nemiro.Convertion class" Url="html/248c13dc-5922-9787-fc27-83a4f6f03de6.htm" />
+  <HelpKINode Title="ToBase16 method" Url="html/61abc12f-fbdb-e0ac-dfc1-925de9dee14b.htm" />
+  <HelpKINode Title="ToBase36 method" Url="html/642076b1-6b19-34c2-eebc-9ca24bb2ca04.htm" />
+  <HelpKINode Title="ToBase62 method" Url="html/4b7466de-5435-e537-e360-1aa9eb70fdc9.htm" />
+  <HelpKINode Title="ToBaseX method" Url="html/da9c9037-8fc0-5e26-a9a3-3be4dbbb8c19.htm" />
+  <HelpKINode Title="ToBoolean method" Url="html/5bc3e744-af13-f677-5c39-dc62303b8556.htm" />
+  <HelpKINode Title="ToByte method" Url="html/3e0cece2-f409-9e9e-532f-4d3c0032241e.htm" />
+  <HelpKINode Title="ToDateTime method" Url="html/010572b9-3cdd-cb98-81c7-da02de022396.htm" />
+  <HelpKINode Title="ToDecimal method" Url="html/bdd7298d-ced0-d0d6-af4a-c9c7a06d6365.htm" />
+  <HelpKINode Title="ToDouble method" Url="html/9f62123b-e788-6096-f10a-ce66bc65f37d.htm" />
+  <HelpKINode Title="ToInt16 method" Url="html/407d3774-557e-50e6-4269-f66ef14387bc.htm" />
+  <HelpKINode Title="ToInt32 method" Url="html/df158930-262d-2d81-a11c-dd2c7f494c41.htm" />
+  <HelpKINode Title="ToInt64 method" Url="html/38e6c023-5478-bc1f-bc6c-6257ad700b84.htm" />
+  <HelpKINode Title="ToMoneyString method" Url="html/a18e2163-0c39-531e-7977-199e217405c5.htm" />
+  <HelpKINode Title="ToString method" Url="html/5b1b95a5-dfa6-21bc-c5b8-30f94b4cb8fa.htm" />
+  <HelpKINode Title="ToStringBuilder method" Url="html/7fafcd12-dd10-fb96-b161-dbb1a76db8e2.htm" />
+  <HelpKINode Title="ToTimeSpan method" Url="html/ae96b161-33fc-e919-3e97-9a896e1527f2.htm" />
+  <HelpKINode Title="ToUInt16 method" Url="html/6d3a7580-32b7-6164-0703-e2e2f81176a9.htm" />
+  <HelpKINode Title="ToUInt32 method" Url="html/9099fb17-fc0e-881f-1985-2fc0742fc88b.htm" />
+  <HelpKINode Title="ToUInt64 method" Url="html/1a375eea-f27e-f715-3d32-4a18776cc8e7.htm" />
+</HelpKI>

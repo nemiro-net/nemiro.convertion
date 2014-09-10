@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="3b6d402d-a45c-4ed3-a775-e7b3ef2b5450" Title="Home" Url="Content/Index.html">
+    <HelpTOCNode Title="Get Started" Url="Content/Installation.html" />
+    <HelpTOCNode Title="Version number " Url="Content/Version.html" />
+    <HelpTOCNode Title="License" Url="Content/License.html" />
+    <HelpTOCNode Title="Donate" Url="Content/Donate.html" />
+    <HelpTOCNode Title="Feedback" Url="Content/Feedback.html" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="eaa6137e-eb5e-43d5-9927-790632ad638e" Title="Nemiro Namespace" Url="html/6ad729a5-cc14-c644-c43d-6cb0d9014c4f.htm">
+    <HelpTOCNode Id="677caf00-c44a-4f5f-a3b0-0aa04276c411" Title="Convertion Class" Url="html/248c13dc-5922-9787-fc27-83a4f6f03de6.htm">
+      <HelpTOCNode Id="59615e0c-6719-48ed-89ab-ee2acec95d73" Title="Convertion Methods" Url="html/569f2a40-5490-3668-cc79-04dcdac9c6d5.htm">
+        <HelpTOCNode Id="6a29568c-bef4-4c59-8b98-0602862415f3" Title="FromBase16 Method " Url="html/ad8be5da-54ce-0c10-dd9e-cb54501a3206.htm">
+          <HelpTOCNode Title="FromBase16 Method (String)" Url="html/7e1dce4f-97bb-6428-0b2a-188d251b3f48.htm" />
+          <HelpTOCNode Title="FromBase16 Method (String, String)" Url="html/e4849327-25d7-2dc3-f179-c8da361f130e.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="dadbeeb1-9692-434a-a742-79939f96e339" Title="FromBase36 Method " Url="html/b8f12486-880a-8894-d05d-1cdb2fa78180.htm">
+          <HelpTOCNode Title="FromBase36 Method (String)" Url="html/da22b458-99aa-6603-4ad1-d6cf45b79f5f.htm" />
+          <HelpTOCNode Title="FromBase36 Method (String, String)" Url="html/50cef47a-6b1a-8491-8291-e6a980b94af0.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="cb778613-cb46-4d9e-8ebd-45a72729283f" Title="FromBase62 Method " Url="html/0a60504b-8b87-e416-4469-de66b78c2c99.htm">
+          <HelpTOCNode Title="FromBase62 Method (String)" Url="html/14e61c6d-f9e1-b079-f4e3-fb4fb548b610.htm" />
+          <HelpTOCNode Title="FromBase62 Method (String, String)" Url="html/7ffef69d-64b2-3e72-9013-28299664b788.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="FromBaseX Method " Url="html/53f47205-c250-82a6-cd14-e752c9ea9a78.htm" />
+        <HelpTOCNode Id="4d4485c0-42e2-43d8-9212-ac4a7e9073e2" Title="ToBase16 Method " Url="html/61abc12f-fbdb-e0ac-dfc1-925de9dee14b.htm">
+          <HelpTOCNode Title="ToBase16 Method (Int64)" Url="html/552f330a-3853-7ccd-c4d4-68896015dcb4.htm" />
+          <HelpTOCNode Title="ToBase16 Method (Int64, String)" Url="html/d5c75a98-fb13-9c04-2162-502982e6cc8e.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="166fcfa9-f829-4005-8e96-d88c14975945" Title="ToBase36 Method " Url="html/642076b1-6b19-34c2-eebc-9ca24bb2ca04.htm">
+          <HelpTOCNode Title="ToBase36 Method (Int64)" Url="html/e8e88da6-12fe-0345-43da-f798e674072b.htm" />
+          <HelpTOCNode Title="ToBase36 Method (Int64, String)" Url="html/3bb93dd8-040f-ba02-b473-fb594e5c15b4.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="8ac697a5-fb54-46d9-a11d-f87b1dbfe6d0" Title="ToBase62 Method " Url="html/4b7466de-5435-e537-e360-1aa9eb70fdc9.htm">
+          <HelpTOCNode Title="ToBase62 Method (Int64)" Url="html/52a97983-266e-c9b6-fbbc-4f2f0cfe42b7.htm" />
+          <HelpTOCNode Title="ToBase62 Method (Int64, String)" Url="html/3c6c75c1-2166-3533-cf88-a7cb4824b2c1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ToBaseX Method " Url="html/da9c9037-8fc0-5e26-a9a3-3be4dbbb8c19.htm" />
+        <HelpTOCNode Id="6f62219f-7ae8-4dce-b895-523fae74bbd7" Title="ToBoolean Method " Url="html/5bc3e744-af13-f677-5c39-dc62303b8556.htm">
+          <HelpTOCNode Title="ToBoolean Method (Object)" Url="html/8222ca04-9094-ef37-af46-9bbb095b982d.htm" />
+          <HelpTOCNode Title="ToBoolean Method (Object, Boolean)" Url="html/6a699773-c450-6b8d-a2a8-7e52979dfb05.htm" />
+          <HelpTOCNode Title="ToBoolean Method (Object, Nullable(Boolean))" Url="html/5608af4e-062b-2251-ecf2-ee9a1b0918eb.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="0226a6b3-68a5-49a8-b8e9-20b6f5f1916d" Title="ToByte Method " Url="html/3e0cece2-f409-9e9e-532f-4d3c0032241e.htm">
+          <HelpTOCNode Title="ToByte Method (Object)" Url="html/2b95ab47-94e0-96b2-c480-405a7c698ed9.htm" />
+          <HelpTOCNode Title="ToByte Method (Object, Byte)" Url="html/1ecf42b5-c372-bbb2-b704-d70274924172.htm" />
+          <HelpTOCNode Title="ToByte Method (Object, Nullable(Byte))" Url="html/266e63d2-4760-d87d-449a-412b7b4338e0.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="2e4a4246-f39d-4c03-979f-27775f6b3292" Title="ToDateTime Method " Url="html/010572b9-3cdd-cb98-81c7-da02de022396.htm">
+          <HelpTOCNode Title="ToDateTime Method (Object)" Url="html/6f25db3c-66a5-e23f-6eee-19c21e1ceffc.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, DateTime)" Url="html/db6284e6-b610-2170-72c6-29feadfc4ab5.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, Nullable(DateTime))" Url="html/01d0bb34-0d11-bb37-3303-4e5b3283644d.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, String)" Url="html/6a007375-9895-8ff2-2cf9-5554a33ec12c.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, String, DateTime)" Url="html/226ad66d-5b92-5c1a-c28e-21c82dd9ad07.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, String, Nullable(DateTime))" Url="html/4451b766-c2b5-1e10-6407-d91543f00ea3.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, String, String)" Url="html/ca2dd8de-1eaa-ed31-7c01-6764b0066759.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, String, String, DateTime)" Url="html/5b47e371-6764-7499-e2cd-f91590d9421a.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, String, String, Nullable(DateTime))" Url="html/c1c3af2d-0b7c-3fac-731e-b9db939e61a4.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, String, String, String)" Url="html/b28a8a85-6941-49dd-6d83-77b276aace01.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, String, String, String, DateTime)" Url="html/b9785bfb-c075-f7a2-0c3e-350651b4fed1.htm" />
+          <HelpTOCNode Title="ToDateTime Method (Object, String, String, String, Nullable(DateTime))" Url="html/dfb7736b-3539-ecc0-7988-2421c6e99288.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="3ce2f15f-f698-4f3b-9b27-ed849ca3f220" Title="ToDecimal Method " Url="html/bdd7298d-ced0-d0d6-af4a-c9c7a06d6365.htm">
+          <HelpTOCNode Title="ToDecimal Method (Object)" Url="html/88a76a90-fcba-a748-da22-a01aa09bed51.htm" />
+          <HelpTOCNode Title="ToDecimal Method (Object, Decimal)" Url="html/c82f918d-3e7c-0a26-51a9-734b3dc8299a.htm" />
+          <HelpTOCNode Title="ToDecimal Method (Object, Nullable(Decimal))" Url="html/207b3d8e-60e4-35d4-3d70-b27a93b213cc.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="d222f605-bb51-41f4-bfeb-2324c44e0483" Title="ToDouble Method " Url="html/9f62123b-e788-6096-f10a-ce66bc65f37d.htm">
+          <HelpTOCNode Title="ToDouble Method (Object)" Url="html/4f7eec47-19f9-e1b2-1cbe-1d716e01b13e.htm" />
+          <HelpTOCNode Title="ToDouble Method (Object, Double)" Url="html/00edb5cd-f96c-e6b1-c0ae-d913a05a9566.htm" />
+          <HelpTOCNode Title="ToDouble Method (Object, Nullable(Double))" Url="html/79879f1b-447e-d09b-0dd6-f8c9c4610ceb.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="bc213f33-58e1-41ee-8b85-cd66e574d720" Title="ToInt16 Method " Url="html/407d3774-557e-50e6-4269-f66ef14387bc.htm">
+          <HelpTOCNode Title="ToInt16 Method (Object)" Url="html/eb17cc35-0d24-5c68-5a25-5d22f5044bc6.htm" />
+          <HelpTOCNode Title="ToInt16 Method (Object, Int16)" Url="html/3af03611-708c-4d21-1f24-cecbcc7b6350.htm" />
+          <HelpTOCNode Title="ToInt16 Method (Object, Nullable(Int16))" Url="html/1e484437-b844-0d93-e48b-53a494067555.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="4de314ea-dcd6-4ae4-a716-d2a14b1df00d" Title="ToInt32 Method " Url="html/df158930-262d-2d81-a11c-dd2c7f494c41.htm">
+          <HelpTOCNode Title="ToInt32 Method (Object)" Url="html/26808e24-cf70-d3f0-5bec-30c2adf3c1ba.htm" />
+          <HelpTOCNode Title="ToInt32 Method (Object, Int32)" Url="html/30a2b4cd-1f43-245a-8a09-46032b16b7c2.htm" />
+          <HelpTOCNode Title="ToInt32 Method (Object, Nullable(Int32))" Url="html/2b50d98c-f4fd-bddb-1e96-26ad5837d275.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="e24551f3-e1d7-4bc3-9c28-d90e30fd4ec9" Title="ToInt64 Method " Url="html/38e6c023-5478-bc1f-bc6c-6257ad700b84.htm">
+          <HelpTOCNode Title="ToInt64 Method (Object)" Url="html/74bc85ab-59c5-758b-6454-ee3018255ce1.htm" />
+          <HelpTOCNode Title="ToInt64 Method (Object, Int64)" Url="html/414a02bb-fab5-e561-41c6-9b8f2d721857.htm" />
+          <HelpTOCNode Title="ToInt64 Method (Object, Nullable(Int64))" Url="html/f47a5394-e4a4-5707-db65-39f63d565bfa.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="58cbafa0-7d9a-40d1-ac5e-bd68b13d8ef7" Title="ToMoneyString Method " Url="html/a18e2163-0c39-531e-7977-199e217405c5.htm">
+          <HelpTOCNode Title="ToMoneyString Method (Object)" Url="html/d43a2dcb-a192-c7c1-5c18-1b079cca6ab2.htm" />
+          <HelpTOCNode Title="ToMoneyString Method (Object, Boolean)" Url="html/8e1a6acd-5659-1070-f3bb-66e492ef1b76.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="f885632a-f1c4-4b6b-b2e6-631542b1bbf7" Title="ToString Method " Url="html/5b1b95a5-dfa6-21bc-c5b8-30f94b4cb8fa.htm">
+          <HelpTOCNode Title="ToString Method (Object)" Url="html/ecb6d4de-0c2e-7e40-9897-42656f44a8f7.htm" />
+          <HelpTOCNode Title="ToString Method (Object, String)" Url="html/25f79536-17fd-0e29-ca54-4242e7b4e8c6.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="453f2232-cbcf-466f-a6ea-afcb0b6c5769" Title="ToStringBuilder Method " Url="html/7fafcd12-dd10-fb96-b161-dbb1a76db8e2.htm">
+          <HelpTOCNode Title="ToStringBuilder Method (Object)" Url="html/d6da39bb-428e-ce05-c0bd-64232b13944a.htm" />
+          <HelpTOCNode Title="ToStringBuilder Method (Object, StringBuilder)" Url="html/39990a3f-6ed1-a0c2-cd42-84a41146ab90.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="eb8ee5d7-562a-41b2-a528-9ade38103d8c" Title="ToTimeSpan Method " Url="html/ae96b161-33fc-e919-3e97-9a896e1527f2.htm">
+          <HelpTOCNode Title="ToTimeSpan Method (Object)" Url="html/f0bc207a-05c6-e0ff-6543-13027c59f985.htm" />
+          <HelpTOCNode Title="ToTimeSpan Method (Object, Nullable(TimeSpan))" Url="html/8958d134-251c-6a18-8372-a83f23e7b31c.htm" />
+          <HelpTOCNode Title="ToTimeSpan Method (Object, String)" Url="html/ffe2ac39-f34a-729c-b878-178216d50788.htm" />
+          <HelpTOCNode Title="ToTimeSpan Method (Object, TimeSpan)" Url="html/cf9d0f9d-07f5-1387-cf97-ba0e481caad9.htm" />
+          <HelpTOCNode Title="ToTimeSpan Method (Object, String, Nullable(TimeSpan))" Url="html/1b5a47dd-bd07-93df-857d-f29a32cfea72.htm" />
+          <HelpTOCNode Title="ToTimeSpan Method (Object, String, TimeSpan)" Url="html/fcad63a2-6e1d-b36b-37fb-5b13b2fe7a5b.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="40f85f7b-f588-4e0a-a027-0b3c6acd1b5a" Title="ToUInt16 Method " Url="html/6d3a7580-32b7-6164-0703-e2e2f81176a9.htm">
+          <HelpTOCNode Title="ToUInt16 Method (Object)" Url="html/347016d1-a1de-30d9-181e-8f8c6e14dd4c.htm" />
+          <HelpTOCNode Title="ToUInt16 Method (Object, Nullable(UInt16))" Url="html/ed32e845-98a5-8a63-664a-6dfbf298dd12.htm" />
+          <HelpTOCNode Title="ToUInt16 Method (Object, UInt16)" Url="html/c55c7382-d163-52c3-0e1c-e6a0a5982672.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="f467a283-13cd-411c-aaca-8c12b7cd97e9" Title="ToUInt32 Method " Url="html/9099fb17-fc0e-881f-1985-2fc0742fc88b.htm">
+          <HelpTOCNode Title="ToUInt32 Method (Object)" Url="html/baad7bb3-04bf-1a34-1b0d-62b8f76940bc.htm" />
+          <HelpTOCNode Title="ToUInt32 Method (Object, Nullable(UInt32))" Url="html/729be175-0077-f96d-14f9-651c94f7f822.htm" />
+          <HelpTOCNode Title="ToUInt32 Method (Object, UInt32)" Url="html/b2221c67-fa19-422e-e023-e975dfee5001.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="2f026b59-4850-4bbe-afa3-c706216efcf4" Title="ToUInt64 Method " Url="html/1a375eea-f27e-f715-3d32-4a18776cc8e7.htm">
+          <HelpTOCNode Title="ToUInt64 Method (Object)" Url="html/f0667065-5c71-1ab8-a3c8-1fbd5f8bfb25.htm" />
+          <HelpTOCNode Title="ToUInt64 Method (Object, Nullable(UInt64))" Url="html/36c620af-c9da-3a1c-8425-bfbe91fcd38e.htm" />
+          <HelpTOCNode Title="ToUInt64 Method (Object, UInt64)" Url="html/9c28fd63-f9a6-167b-e4c8-459f83d926c7.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
