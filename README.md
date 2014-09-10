@@ -23,7 +23,7 @@ To install **Nemiro.Convertion**, run the following command in the **Package Man
 * Sandcastle Help File Builder (for documentation project).
 
 ### Examples
-
+**C#**
 ```C#
 object value = "123.456"; // dot
 double num = Convertion.ToDouble(value);
@@ -41,9 +41,14 @@ Console.WriteLine("45102691578 is {0}", duosexagesimal);
 
 string customHex = Convertion.ToBase16(123, "ABCDEFGHIJKLMNOP");
 Console.WriteLine("123 is {0}", customHex);
-Console.WriteLine("{0} is {1}", customHex, Convertion.FromBase16(customHex, "ABCDEFGHIJKLMNOP"));
+Console.WriteLine
+(
+	"{0} is {1}", 
+	customHex, 
+	Convertion.FromBase16(customHex, "ABCDEFGHIJKLMNOP")
+);
 ```
-
+**Visual Basic .NET**
 ```VB
 Dim value As Object = "123.456" // dot
 Dim num As Double = Convertion.ToDouble(value)
@@ -61,7 +66,12 @@ Console.WriteLine("45102691578 is {0}", duosexagesimal)
 
 Dim customHex As String = Convertion.ToBase16(123, "ABCDEFGHIJKLMNOP")
 Console.WriteLine("123 is {0}", customHex)
-Console.WriteLine("{0} is {1}", customHex, Convertion.FromBase16(customHex, "ABCDEFGHIJKLMNOP"))
+Console.WriteLine _
+(
+	"{0} is {1}", 
+	customHex, 
+	Convertion.FromBase16(customHex, "ABCDEFGHIJKLMNOP")
+)
 ```
 
 ### See Also
