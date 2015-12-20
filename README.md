@@ -43,9 +43,9 @@ string customHex = Convertion.ToBase16(123, "ABCDEFGHIJKLMNOP");
 Console.WriteLine("123 is {0}", customHex);
 Console.WriteLine
 (
-	"{0} is {1}", 
-	customHex, 
-	Convertion.FromBase16(customHex, "ABCDEFGHIJKLMNOP")
+  "{0} is {1}", 
+  customHex, 
+  Convertion.FromBase16(customHex, "ABCDEFGHIJKLMNOP")
 );
 ```
 **Visual Basic .NET**
@@ -68,9 +68,9 @@ Dim customHex As String = Convertion.ToBase16(123, "ABCDEFGHIJKLMNOP")
 Console.WriteLine("123 is {0}", customHex)
 Console.WriteLine _
 (
-	"{0} is {1}", 
-	customHex, 
-	Convertion.FromBase16(customHex, "ABCDEFGHIJKLMNOP")
+  "{0} is {1}", 
+  customHex, 
+  Convertion.FromBase16(customHex, "ABCDEFGHIJKLMNOP")
 )
 ```
 
