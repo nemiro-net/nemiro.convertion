@@ -143,6 +143,7 @@ namespace Nemiro
     /// <seealso cref="ToBase36(long, string)"/>
     /// <seealso cref="ToBase62(long, string)"/>
     /// <seealso cref="FromBaseX(string, string)"/>
+    /// <seealso cref="StringFromBaseX(string, string)"/>
     public static string ToBaseX(long value, string charset)
     {
       if (String.IsNullOrEmpty(charset)) { throw new ArgumentNullException("charset"); }
@@ -175,6 +176,7 @@ namespace Nemiro
     /// <seealso cref="FromBase16(string, string)"/>
     /// <seealso cref="FromBase36(string, string)"/>
     /// <seealso cref="FromBase62(string, string)"/>
+    /// <seealso cref="StringFromBaseX(string, string)"/>
     /// <seealso cref="ToBaseX(long, string)"/>
     public static long FromBaseX(string value, string charset)
     {
@@ -189,6 +191,44 @@ namespace Nemiro
       }
       if (negative) { result = -result; }
       return result;
+    }
+
+    /// <summary>
+    /// Converts the specified value from the specified system to decimal and returns string.
+    /// </summary>
+    /// <param name="value">The value to convert.</param>
+    /// <param name="charset">Character set that will be used to format conversion.</param>
+    /// <seealso cref="FromBase16(string, string)"/>
+    /// <seealso cref="FromBase36(string, string)"/>
+    /// <seealso cref="FromBase62(string, string)"/>
+    /// <seealso cref="FromBaseX(string, string)"/>
+    /// <seealso cref="ToBaseX(long, string)"/>
+    public static string StringFromBaseX(string value, string charset)
+    {
+      if (String.IsNullOrEmpty(charset)) { throw new ArgumentNullException("charset"); }
+
+      long result = 0;
+      string zeros = "";
+      int basis = charset.Length;
+      bool negative = value.StartsWith("-");
+
+      if (negative) { value = value.Substring(1); }
+
+      for (int i = value.Length - 1; i >= 0; i -= 1)
+      {
+        var n = Convert.ToInt64(charset.IndexOf(value[i]) * (Math.Pow(basis, (value.Length - i - 1))));
+        result += n;
+        if (n == 0)
+        {
+          zeros += "0";
+        }
+        else
+        {
+          zeros = "";
+        }
+      }
+
+      return String.Format("{0}{1}{2}", (negative ? "-" : ""), zeros, result);
     }
 
     /// <summary>
@@ -209,6 +249,16 @@ namespace Nemiro
     private static string GetNumber(object value)
     {
       if (!Convertion.HasValue(value)) { return "0"; }
+
+      int comma = value.ToString().LastIndexOf(",");
+      int dot = value.ToString().LastIndexOf(".");
+
+      if (comma != -1 && dot != -1)
+      {
+        int separatorIndex = Math.Max(comma, dot);
+        value = value.ToString().Replace((separatorIndex == comma ? "." : ","), "");
+      }
+      
       return Regex.Replace(Regex.Replace(value.ToString(), @",|\.", NumberFormatInfo.CurrentInfo.CurrencyDecimalSeparator), @"\s+", "");
     }
 

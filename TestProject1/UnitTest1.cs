@@ -39,17 +39,25 @@ namespace TestProject1
     }
 
     [TestMethod]
+    public void AnyTest()
+    {
+      string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      string r = "BCD";
+      long n = Convertion.FromBaseX(r, chars);
+      string r2 = Convertion.ToBaseX(n, chars);
+      this.TestContext.WriteLine("{0} => {1} => {2}", r, r2, n);
+      Assert.AreEqual(r, r2);
+    }
+
+    [TestMethod]
     public void Base16()
     {
-      for (int n = 0; n <= 16; n++)
+      for (int n = 0; n <= 256; n++)
       {
         string r = Convertion.ToBase16(n);
         long n2 = Convertion.FromBase16(r);
         this.TestContext.WriteLine("{0} => {1} => {2}", n, r, n2);
-        if (n != n2)
-        {
-          throw new Exception();
-        }
+        Assert.AreEqual(n, n2);
       }
 
       this.TestContext.WriteLine("FF => {0}", Convertion.FromBase16("FF"));
@@ -68,10 +76,7 @@ namespace TestProject1
           string r = Convertion.ToBase16(n);
           long n2 = Convertion.FromBase16(r);
           this.TestContext.WriteLine("{0} => {1} => {2}", n, r, n2);
-          if (n != n2)
-          {
-            throw new Exception();
-          }
+          Assert.AreEqual(n, n2);
         }
 
         this.TestContext.WriteLine("");
@@ -84,27 +89,20 @@ namespace TestProject1
           string r = Convertion.ToBase16(n, customCharset);
           long n2 = Convertion.FromBase16(r, customCharset);
           this.TestContext.WriteLine("{0} => {1} => {2}", n, r, n2);
-          if (n != n2)
-          {
-            throw new Exception();
-          }
+          Assert.AreEqual(n, n2);
         }
       }
     }
-
-
+    
     [TestMethod]
     public void Base36()
     {
-      for (int n = 0; n <= 36; n++)
+      for (int n = 0; n <= 1296; n++)
       {
         string r = Convertion.ToBase36(n);
         long n2 = Convertion.FromBase36(r);
         this.TestContext.WriteLine("{0} => {1} => {2}", n, r, n2);
-        if (n != n2)
-        {
-          throw new Exception();
-        }
+        Assert.AreEqual(n, n2);
       }
 
       var rnd = new Random(DateTime.Now.Millisecond);
@@ -121,10 +119,7 @@ namespace TestProject1
           string r = Convertion.ToBase36(n);
           long n2 = Convertion.FromBase36(r);
           this.TestContext.WriteLine("{0} => {1} => {2}", n, r, n2);
-          if (n != n2)
-          {
-            throw new Exception();
-          }
+          Assert.AreEqual(n, n2);
         }
 
         this.TestContext.WriteLine("");
@@ -137,10 +132,7 @@ namespace TestProject1
           string r = Convertion.ToBase36(n, customCharset);
           long n2 = Convertion.FromBase36(r, customCharset);
           this.TestContext.WriteLine("{0} => {1} => {2}", n, r, n2);
-          if (n != n2)
-          {
-            throw new Exception();
-          }
+          Assert.AreEqual(n, n2);
         }
       }
     }
@@ -148,15 +140,12 @@ namespace TestProject1
     [TestMethod]
     public void Base62()
     {
-      for (int n = 0; n <= 62; n++)
+      for (int n = 0; n <= 3844; n++)
       {
         string r = Convertion.ToBase62(n);
         long n2 = Convertion.FromBase62(r);
         this.TestContext.WriteLine("{0} => {1} => {2}", n, r, n2);
-        if (n != n2)
-        {
-          throw new Exception();
-        }
+        Assert.AreEqual(n, n2);
       }
 
       var rnd = new Random(DateTime.Now.Millisecond);
@@ -173,10 +162,7 @@ namespace TestProject1
           string r = Convertion.ToBase62(n);
           long n2 = Convertion.FromBase62(r);
           this.TestContext.WriteLine("{0} => {1} => {2}", n, r, n2);
-          if (n != n2)
-          {
-            throw new Exception();
-          }
+          Assert.AreEqual(n, n2);
         }
 
         this.TestContext.WriteLine("");
@@ -189,12 +175,34 @@ namespace TestProject1
           string r = Convertion.ToBase62(n, customCharset);
           long n2 = Convertion.FromBase62(r, customCharset);
           this.TestContext.WriteLine("{0} => {1} => {2}", n, r, n2);
-          if (n != n2)
-          {
-            throw new Exception();
-          }
+          Assert.AreEqual(n, n2);
         }
       }
+    }
+    
+    [TestMethod]
+    public void BaseX()
+    {
+      string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      for (int n = 0; n <= 676; n++)
+      {
+        string r = Convertion.ToBaseX(n, chars);
+        long n2 = Convertion.FromBaseX(r, chars);
+        this.TestContext.WriteLine("{0} => {1} => {2}", n, r, n2);
+        Assert.AreEqual(n, n2);
+      }
+    }
+
+    [TestMethod]
+    public void BaseXString()
+    {
+      // https://github.com/alekseynemiro/Nemiro.Convertion/issues/1
+      string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      Assert.AreEqual("00028", Convertion.StringFromBaseX("AAABC", chars));
+      Assert.AreEqual("0028", Convertion.StringFromBaseX("AABC", chars));
+      Assert.AreEqual("028", Convertion.StringFromBaseX("ABC", chars));
+      Assert.AreEqual("28", Convertion.StringFromBaseX("BC", chars));
+      Assert.AreEqual("457004", Convertion.StringFromBaseX("BAABC", chars));
     }
 
     [TestMethod]
@@ -227,15 +235,25 @@ namespace TestProject1
     [TestMethod]
     public void DecimalTest()
     {
-      this.TestContext.WriteLine("0.512 => {0}", Convertion.ToDecimal("0.512"));
-      this.TestContext.WriteLine("0,512 => {0}", Convertion.ToDecimal("0,512"));
+      Assert.AreEqual(0.512m, Convertion.ToDecimal("0.512"));
+      Assert.AreEqual(0.512m, Convertion.ToDecimal("0,512"));
+
+      Assert.AreEqual(123456.78m, Convertion.ToDecimal("123,456.78"));
+      Assert.AreEqual(123456.78m, Convertion.ToDecimal("123 456.78"));
+      Assert.AreEqual(123456.78m, Convertion.ToDecimal("123.456,78"));
     }
 
     [TestMethod]
     public void DoubleTest()
     {
-      this.TestContext.WriteLine("0.512 => {0}", Convertion.ToDouble("0.512"));
-      this.TestContext.WriteLine("0,512 => {0}", Convertion.ToDouble("0,512"));
+      Assert.AreEqual(0.512, Convertion.ToDouble("0.512"));
+      Assert.AreEqual(0.512, Convertion.ToDouble("0,512"));
+
+      Assert.AreEqual(1895, Convertion.ToDouble("1,895.00"));
+      Assert.AreEqual(1895, Convertion.ToDouble("1.895,00"));
+
+      Assert.AreEqual(1895, Convertion.ToDouble("1 895.00"));
+      Assert.AreEqual(1895, Convertion.ToDouble("1 895,00"));
     }
 
     [TestMethod]
@@ -245,6 +263,7 @@ namespace TestProject1
       this.TestContext.WriteLine("1024.512 => {0}", Convertion.ToMoneyString("1024,512"));
       this.TestContext.WriteLine("1024.512 => {0}", Convertion.ToMoneyString("1024.512", true));
       this.TestContext.WriteLine("1024.512 => {0}", Convertion.ToMoneyString("1024,512", true));
+
       this.TestContext.WriteLine("null => {0}", Convertion.ToMoneyString(null));
     }
 
@@ -252,113 +271,293 @@ namespace TestProject1
     public void BooleanTest()
     {
       this.TestContext.WriteLine("true => {0}", Convertion.ToBoolean("true"));
+      Assert.AreEqual(true, Convertion.ToBoolean("true"));
+      
       this.TestContext.WriteLine("false => {0}", Convertion.ToBoolean("false"));
+      Assert.AreEqual(false, Convertion.ToBoolean("false"));
+
       this.TestContext.WriteLine("false (default: true) => {0}", Convertion.ToBoolean("false", true));
+      Assert.AreEqual(false, Convertion.ToBoolean("false", true));
+
       this.TestContext.WriteLine("test (default: null) => {0}", Convertion.ToBoolean("test", null));
+      Assert.AreEqual(null, Convertion.ToBoolean("test", null));
+
       this.TestContext.WriteLine("test (default: true) => {0}", Convertion.ToBoolean("test", true));
+      Assert.AreEqual(true, Convertion.ToBoolean("test", true));
+
       this.TestContext.WriteLine("0 => {0}", Convertion.ToBoolean(0));
+      Assert.AreEqual(false, Convertion.ToBoolean(0));
+
       this.TestContext.WriteLine("'0' => {0}", Convertion.ToBoolean("0"));
+      Assert.AreEqual(false, Convertion.ToBoolean("0"));
+
       this.TestContext.WriteLine("1 => {0}", Convertion.ToBoolean(1));
+      Assert.AreEqual(true, Convertion.ToBoolean(1));
+
       this.TestContext.WriteLine("'1' => {0}", Convertion.ToBoolean("1"));
+      Assert.AreEqual(true, Convertion.ToBoolean("1"));
+
       this.TestContext.WriteLine("123 => {0}", Convertion.ToBoolean(123));
+      Assert.AreEqual(true, Convertion.ToBoolean(123));
+
       this.TestContext.WriteLine("'123' => {0}", Convertion.ToBoolean("123"));
+      Assert.AreEqual(false, Convertion.ToBoolean("123"));
+
       this.TestContext.WriteLine("null => {0}", Convertion.ToBoolean(null));
+      Assert.AreEqual(false, Convertion.ToBoolean(null));
+
       this.TestContext.WriteLine("DBNull => {0}", Convertion.ToBoolean(DBNull.Value));
+      Assert.AreEqual(false, Convertion.ToBoolean(DBNull.Value));
+
       this.TestContext.WriteLine("null (default: true) => {0}", Convertion.ToBoolean(null, true));
+      Assert.AreEqual(true, Convertion.ToBoolean(null, true));
+
       this.TestContext.WriteLine("DBNull (default: true) => {0}", Convertion.ToBoolean(DBNull.Value, true));
+      Assert.AreEqual(true, Convertion.ToBoolean(DBNull.Value, true));
+
       this.TestContext.WriteLine("(bool?)null => {0}", Convertion.ToBoolean((bool?)null));
+      Assert.AreEqual(false, Convertion.ToBoolean((bool?)null));
+
       this.TestContext.WriteLine("(bool?)null (default: true) => {0}", Convertion.ToBoolean((bool?)null, true));
+      Assert.AreEqual(true, Convertion.ToBoolean((bool?)null, true));
     }
 
     [TestMethod]
     public void IntegerTest()
     {
       this.TestContext.WriteLine("123.456 => {0}", Convertion.ToInt32(123.456));
+      Assert.AreEqual(123, Convertion.ToInt32(123.456));
+
       this.TestContext.WriteLine("'123.456' => {0}", Convertion.ToInt32("123.456"));
+      Assert.AreEqual(123, Convertion.ToInt32("123.456"));
+
       this.TestContext.WriteLine("'123,456' => {0}", Convertion.ToInt32("123,456"));
+      Assert.AreEqual(123, Convertion.ToInt32("123,456"));
+
+      this.TestContext.WriteLine("'1 223,456' => {0}", Convertion.ToInt32("1 223,456"));
+      Assert.AreEqual(1223, Convertion.ToInt32("1 223,456"));
+
       this.TestContext.WriteLine("123.789 => {0}", Convertion.ToInt32(123.789));
+      Assert.AreEqual(124, Convertion.ToInt32(123.789));
+
       this.TestContext.WriteLine("'123.789' => {0}", Convertion.ToInt32("123.789"));
+      Assert.AreEqual(124, Convertion.ToInt32("123.789"));
+
       this.TestContext.WriteLine("'123,789' => {0}", Convertion.ToInt32("123,789"));
+      Assert.AreEqual(124, Convertion.ToInt32("123,789"));
+
       this.TestContext.WriteLine("test (default: 123) => {0}", Convertion.ToInt32("test", 123));
+      Assert.AreEqual(123, Convertion.ToInt32("test", 123));
+
       this.TestContext.WriteLine("test (default: null) => {0}", Convertion.ToInt32("test", null));
+      Assert.AreEqual(null, Convertion.ToInt32("test", null));
+
       this.TestContext.WriteLine("test => {0}", Convertion.ToInt32("test"));
+      Assert.AreEqual(0, Convertion.ToInt32("test"));
+
       this.TestContext.WriteLine("null => {0}", Convertion.ToInt32(null));
+      Assert.AreEqual(0, Convertion.ToInt32(null));
+
       this.TestContext.WriteLine("DBNull => {0}", Convertion.ToInt32(DBNull.Value));
+      Assert.AreEqual(0, Convertion.ToInt32(DBNull.Value));
+
       this.TestContext.WriteLine("Decimal.MinValue => {0}", Convertion.ToInt32(Decimal.MinValue));
+      Assert.AreEqual(0, Convertion.ToInt32(Decimal.MinValue));
+
       this.TestContext.WriteLine("Decimal.MaxValue => {0}", Convertion.ToInt32(Decimal.MaxValue));
+      Assert.AreEqual(0, Convertion.ToInt32(Decimal.MaxValue));
+
       this.TestContext.WriteLine("UInt64.MinValue => {0}", Convertion.ToInt32(UInt64.MinValue));
+      Assert.AreEqual(0, Convertion.ToInt32(UInt64.MinValue));
+
       this.TestContext.WriteLine("UInt64.MaxValue => {0}", Convertion.ToInt32(UInt64.MaxValue));
+      Assert.AreEqual(0, Convertion.ToInt32(UInt64.MaxValue));
+
       this.TestContext.WriteLine("Int32.MinValue => {0}", Convertion.ToInt32(Int32.MinValue));
+      Assert.AreEqual(Int32.MinValue, Convertion.ToInt32(Int32.MinValue));
+
       this.TestContext.WriteLine("Int32.MaxValue => {0}", Convertion.ToInt32(Int32.MaxValue));
+      Assert.AreEqual(Int32.MaxValue, Convertion.ToInt32(Int32.MaxValue));
     }
 
     [TestMethod]
     public void LongTest()
     {
       this.TestContext.WriteLine("123.456 => {0}", Convertion.ToInt64(123.456));
+      Assert.AreEqual(123, Convertion.ToInt64(123.456));
+
       this.TestContext.WriteLine("'123.456' => {0}", Convertion.ToInt64("123.456"));
+      Assert.AreEqual(123, Convertion.ToInt64("123.456"));
+
       this.TestContext.WriteLine("'123,456' => {0}", Convertion.ToInt64("123,456"));
+      Assert.AreEqual(123, Convertion.ToInt64("123,456"));
+
+      this.TestContext.WriteLine("'1 223,456' => {0}", Convertion.ToInt64("1 223,456"));
+      Assert.AreEqual(1223, Convertion.ToInt64("1 223,456"));
+
       this.TestContext.WriteLine("123.789 => {0}", Convertion.ToInt64(123.789));
+      Assert.AreEqual(124, Convertion.ToInt64(123.789));
+
       this.TestContext.WriteLine("'123.789' => {0}", Convertion.ToInt64("123.789"));
+      Assert.AreEqual(124, Convertion.ToInt64("123.789"));
+
       this.TestContext.WriteLine("'123,789' => {0}", Convertion.ToInt64("123,789"));
+      Assert.AreEqual(124, Convertion.ToInt64("123,789"));
+
       this.TestContext.WriteLine("test (default: 123) => {0}", Convertion.ToInt64("test", 123));
+      Assert.AreEqual(123, Convertion.ToInt64("test", 123));
+
       this.TestContext.WriteLine("test (default: null) => {0}", Convertion.ToInt64("test", null));
+      Assert.AreEqual(null, Convertion.ToInt64("test", null));
+
       this.TestContext.WriteLine("test => {0}", Convertion.ToInt64("test"));
+      Assert.AreEqual(0, Convertion.ToInt64("test"));
+
       this.TestContext.WriteLine("null => {0}", Convertion.ToInt64(null));
+      Assert.AreEqual(0, Convertion.ToInt64(null));
+
       this.TestContext.WriteLine("DBNull => {0}", Convertion.ToInt64(DBNull.Value));
+      Assert.AreEqual(0, Convertion.ToInt64(DBNull.Value));
+
       this.TestContext.WriteLine("Decimal.MinValue => {0}", Convertion.ToInt64(Decimal.MinValue));
+      Assert.AreEqual(0, Convertion.ToInt64(Decimal.MinValue));
+
       this.TestContext.WriteLine("Decimal.MaxValue => {0}", Convertion.ToInt64(Decimal.MaxValue));
+      Assert.AreEqual(0, Convertion.ToInt64(Decimal.MaxValue));
+
       this.TestContext.WriteLine("UInt64.MinValue => {0}", Convertion.ToInt64(UInt64.MinValue));
+      Assert.AreEqual(0, Convertion.ToInt64(UInt64.MinValue));
+
       this.TestContext.WriteLine("UInt64.MaxValue => {0}", Convertion.ToInt64(UInt64.MaxValue));
+      Assert.AreEqual(0, Convertion.ToInt64(UInt64.MaxValue));
+
       this.TestContext.WriteLine("Int64.MinValue => {0}", Convertion.ToInt64(Int64.MinValue));
+      Assert.AreEqual(-9223372036854775808, Convertion.ToInt64(Int64.MinValue));
+
       this.TestContext.WriteLine("Int64.MaxValue => {0}", Convertion.ToInt64(Int64.MaxValue));
+      Assert.AreEqual(9223372036854775807, Convertion.ToInt64(Int64.MaxValue));
     }
 
     [TestMethod]
     public void LongUInt64()
     {
       this.TestContext.WriteLine("123.456 => {0}", Convertion.ToUInt64(123.456));
+      Assert.AreEqual(123U, Convertion.ToUInt64(123.456));
+
       this.TestContext.WriteLine("'123.456' => {0}", Convertion.ToUInt64("123.456"));
+      Assert.AreEqual(123U, Convertion.ToUInt64("123.456"));
+
       this.TestContext.WriteLine("'  123,456  ' => {0}", Convertion.ToUInt64("  123,456  "));
+      Assert.AreEqual(123U, Convertion.ToUInt64("  123,456  "));
+
       this.TestContext.WriteLine("123.789 => {0}", Convertion.ToUInt64(123.789));
+      Assert.AreEqual(124U, Convertion.ToUInt64(123.789));
+
       this.TestContext.WriteLine("'123.789' => {0}", Convertion.ToUInt64("123.789"));
+      Assert.AreEqual(124U, Convertion.ToUInt64("123.789"));
+
       this.TestContext.WriteLine("'123,789' => {0}", Convertion.ToUInt64("123,789"));
+      Assert.AreEqual(124U, Convertion.ToUInt64("123,789"));
+
+      this.TestContext.WriteLine("'1,123.789' => {0}", Convertion.ToUInt64("1,123.789"));
+      Assert.AreEqual(1124U, Convertion.ToUInt64("1,123.789"));
+
       this.TestContext.WriteLine("test (default: 123) => {0}", Convertion.ToUInt64("test", 123));
+      Assert.AreEqual(123U, Convertion.ToUInt64("test", 123));
+
       this.TestContext.WriteLine("test (default: null) => {0}", Convertion.ToUInt64("test", null));
+      Assert.AreEqual(null, Convertion.ToUInt64("test", null));
+
       this.TestContext.WriteLine("test => {0}", Convertion.ToUInt64("test"));
+      Assert.AreEqual(0U, Convertion.ToUInt64("test"));
+
       this.TestContext.WriteLine("null => {0}", Convertion.ToUInt64(null));
+      Assert.AreEqual(0U, Convertion.ToUInt64(null));
+
       this.TestContext.WriteLine("DBNull => {0}", Convertion.ToUInt64(DBNull.Value));
+      Assert.AreEqual(0U, Convertion.ToUInt64(DBNull.Value));
+
       this.TestContext.WriteLine("Decimal.MinValue => {0}", Convertion.ToUInt64(Decimal.MinValue));
+      Assert.AreEqual(0U, Convertion.ToUInt64(Decimal.MinValue));
+
       this.TestContext.WriteLine("Decimal.MaxValue => {0}", Convertion.ToUInt64(Decimal.MaxValue));
+      Assert.AreEqual(0U, Convertion.ToUInt64(Decimal.MaxValue));
+
       this.TestContext.WriteLine("UInt64.MinValue => {0}", Convertion.ToUInt64(UInt64.MinValue));
+      Assert.AreEqual(UInt64.MinValue, Convertion.ToUInt64(UInt64.MinValue));
+
       this.TestContext.WriteLine("UInt64.MaxValue => {0}", Convertion.ToUInt64(UInt64.MaxValue));
+      Assert.AreEqual(UInt64.MaxValue, Convertion.ToUInt64(UInt64.MaxValue));
+
       this.TestContext.WriteLine("Int64.MinValue => {0}", Convertion.ToUInt64(Int64.MinValue));
+      Assert.AreEqual(0U, Convertion.ToUInt64(Int64.MinValue));
+
       this.TestContext.WriteLine("Int64.MaxValue => {0}", Convertion.ToUInt64(Int64.MaxValue));
+      Assert.AreEqual(Convert.ToUInt64(Int64.MaxValue), Convertion.ToUInt64(Int64.MaxValue));
     }
 
     [TestMethod]
     public void ByteTest()
     {
       this.TestContext.WriteLine("123.456 => {0}", Convertion.ToByte(123.456));
+      Assert.AreEqual(123, Convertion.ToByte(123.456));
+
       this.TestContext.WriteLine("'123.456' => {0}", Convertion.ToByte("123.456"));
+      Assert.AreEqual(123, Convertion.ToByte("123.456"));
+
       this.TestContext.WriteLine("'123,456' => {0}", Convertion.ToByte("123,456"));
+      Assert.AreEqual(123, Convertion.ToByte("123,456"));
+
       this.TestContext.WriteLine("123.789 => {0}", Convertion.ToByte(123.789));
+      Assert.AreEqual(124, Convertion.ToByte(123.789));
+
       this.TestContext.WriteLine("'123.789' => {0}", Convertion.ToByte("123.789"));
+      Assert.AreEqual(124, Convertion.ToByte("123.789"));
+      
       this.TestContext.WriteLine("'123,789' => {0}", Convertion.ToByte("123,789"));
+      Assert.AreEqual(124, Convertion.ToByte("123,789"));
+
       this.TestContext.WriteLine("'255' => {0}", Convertion.ToByte("255"));
+      Assert.AreEqual(255, Convertion.ToByte("255"));
+
       this.TestContext.WriteLine("'256' => {0}", Convertion.ToByte("256"));
+      Assert.AreEqual(0, Convertion.ToByte("256"));
+
       this.TestContext.WriteLine("-123 => {0}", Convertion.ToByte(-123));
+      Assert.AreEqual(0, Convertion.ToByte(-123));
+
       this.TestContext.WriteLine("test (default: 123) => {0}", Convertion.ToByte("test", 123));
+      Assert.AreEqual(123, Convertion.ToByte("test", 123));
+
       this.TestContext.WriteLine("test (default: null) => {0}", Convertion.ToByte("test", null));
+      Assert.AreEqual(null, Convertion.ToByte("test", null));
+
       this.TestContext.WriteLine("test => {0}", Convertion.ToByte("test"));
+      Assert.AreEqual(0, Convertion.ToByte("test"));
+
       this.TestContext.WriteLine("null => {0}", Convertion.ToByte(null));
+      Assert.AreEqual(0, Convertion.ToByte(null));
+
       this.TestContext.WriteLine("DBNull => {0}", Convertion.ToByte(DBNull.Value));
+      Assert.AreEqual(0, Convertion.ToByte(DBNull.Value));
+
       this.TestContext.WriteLine("Decimal.MinValue => {0}", Convertion.ToByte(Decimal.MinValue));
+      Assert.AreEqual(0, Convertion.ToByte(Decimal.MinValue));
+
       this.TestContext.WriteLine("Decimal.MaxValue => {0}", Convertion.ToByte(Decimal.MaxValue));
+      Assert.AreEqual(0, Convertion.ToByte(Decimal.MaxValue));
+
       this.TestContext.WriteLine("UInt64.MinValue => {0}", Convertion.ToByte(UInt64.MinValue));
+      Assert.AreEqual(0, Convertion.ToByte(UInt64.MinValue));
+
       this.TestContext.WriteLine("UInt64.MaxValue => {0}", Convertion.ToByte(UInt64.MaxValue));
+      Assert.AreEqual(0, Convertion.ToByte(UInt64.MaxValue));
+
       this.TestContext.WriteLine("byte.MinValue => {0}", Convertion.ToByte(byte.MinValue.ToString()));
+      Assert.AreEqual(0, Convertion.ToByte(byte.MinValue.ToString()));
+
       this.TestContext.WriteLine("byte.MaxValue => {0}", Convertion.ToByte(byte.MaxValue.ToString()));
+      Assert.AreEqual(255, Convertion.ToByte(byte.MaxValue.ToString()));
     }
 
     [TestMethod]

@@ -39,13 +39,20 @@
     <Preliminary>False</Preliminary>
     <NamingMethod>Guid</NamingMethod>
     <HelpTitle>Nemiro.Convertion</HelpTitle>
-    <FooterText>Copyright &amp;#169%3b &amp;lt%3ba href=&amp;quot%3bhttp://nemiro.net&amp;quot%3b target=&amp;quot%3b_top&amp;quot%3b&amp;gt%3bAleksey Nemiro&amp;lt%3b/a&amp;gt%3b, 2008-2014</FooterText>
+    <FooterText>Copyright &amp;#169%3b &amp;lt%3ba href=&amp;quot%3bhttp://nemiro.net&amp;quot%3b target=&amp;quot%3b_top&amp;quot%3b&amp;gt%3bAleksey Nemiro&amp;lt%3b/a&amp;gt%3b, 2008-2014 &amp;lt%3b!-- Yandex.Metrika counter --&amp;gt%3b&amp;lt%3bscript type=&amp;quot%3btext/javascript&amp;quot%3b&amp;gt%3b%28function %28d, w, c%29 {{ %28w[c] = w[c] || []%29.push%28function%28%29 {{ try {{ w.yaCounter26132205 = new Ya.Metrika%28{{id:26132205, clickmap:true, trackLinks:true, accurateTrackBounce:true}}%29%3b }} catch%28e%29 {{ }} }}%29%3b var n = d.getElementsByTagName%28&amp;quot%3bscript&amp;quot%3b%29[0], s = d.createElement%28&amp;quot%3bscript&amp;quot%3b%29, f = function %28%29 {{ n.parentNode.insertBefore%28s, n%29%3b }}%3b s.type = &amp;quot%3btext/javascript&amp;quot%3b%3b s.async = true%3b s.src = %28d.location.protocol == &amp;quot%3bhttps:&amp;quot%3b %3f &amp;quot%3bhttps:&amp;quot%3b : &amp;quot%3bhttp:&amp;quot%3b%29 + &amp;quot%3b//mc.yandex.ru/metrika/watch.js&amp;quot%3b%3b if %28w.opera == &amp;quot%3b[object Opera]&amp;quot%3b%29 {{ d.addEventListener%28&amp;quot%3bDOMContentLoaded&amp;quot%3b, f, false%29%3b }} else {{ f%28%29%3b }} }}%29%28document, window, &amp;quot%3byandex_metrika_callbacks&amp;quot%3b%29%3b&amp;lt%3b/script&amp;gt%3b&amp;lt%3bnoscript&amp;gt%3b&amp;lt%3bdiv&amp;gt%3b&amp;lt%3bimg src=&amp;quot%3b//mc.yandex.ru/watch/26132205&amp;quot%3b style=&amp;quot%3bposition:absolute%3b left:-9999px%3b&amp;quot%3b alt=&amp;quot%3b&amp;quot%3b /&amp;gt%3b&amp;lt%3b/div&amp;gt%3b&amp;lt%3b/noscript&amp;gt%3b&amp;lt%3b!-- /Yandex.Metrika counter --&amp;gt%3b</FooterText>
     <CopyrightHref>http://convertion.nemiro.net</CopyrightHref>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <MissingTags>None</MissingTags>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="Nemiro" isDocumented="True">This is the main namespace of &lt;a href="http://nemiro.net" traget="_top"&gt;Aleksey Nemiro class libraries and components for .NET&lt;/a&gt;.</NamespaceSummaryItem>
     </NamespaceSummaries>
+    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
+    <HelpFileFormat>Website</HelpFileFormat>
+    <IndentHtml>False</IndentHtml>
+    <KeepLogFile>True</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <CppCommentsFixup>False</CppCommentsFixup>
+    <CleanIntermediates>True</CleanIntermediates>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
@@ -68,7 +75,6 @@
   <ItemGroup>
     <Folder Include="Content" />
     <Folder Include="icons" />
-    <Folder Include="Media" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Donate.html" />
